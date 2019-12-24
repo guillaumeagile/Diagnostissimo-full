@@ -1,0 +1,32 @@
+<main id="container">
+  <header class="title">
+    <h1>Diagnostissimo Monitor</h1>
+  </header>
+  <div id="jobs">
+    <h3>Print Jobs</h3>
+    <table>
+      <tr *ngFor="let logEntry of logEntries">
+        <td *ngIf="logEntry.entryStatus === 'SUCCESS'">
+          <div class="logtext">
+            <img src="./assets/success.svg" width="40px" height="40px" alt="success" />
+          </div>
+          <div class="logtext">
+            Success - {{ logEntry.entryDate }} : Document successfully inserted by
+            {{ logEntry.ariaUser }}
+            ({{ logEntry.windowsLogin }}) on {{ logEntry.machine }}
+          </div>
+        </td>
+        <td *ngIf="logEntry.entryStatus === 'ERROR'">
+          <div class="logtext">
+            <img src="./assets/failure.svg" width="40px" height="40px" alt="failure" />
+          </div>
+          <div class="failureLogtext">
+            Failure - {{ logEntry.entryDate }} : Document insertion failure by {{ logEntry.ariaUser }} ({{
+              logEntry.windowsLogin
+            }}) on {{ logEntry.machine }}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</main>

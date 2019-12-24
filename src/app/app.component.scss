@@ -1,0 +1,62 @@
+#container {
+  margin: 0 auto;
+  padding: 10px 10px 10px 10px;
+  width: 1280px;
+  height: 1024px;
+  position: relative;
+  // border: 1px solid red;
+}
+
+#jobs {
+  margin-left: 14px;
+  position: absolute;
+  top: 114px;
+  // border: 1px solid green;
+}
+h1 {
+  font-size: 36px;
+  margin: 0 0 0 0;
+  line-height: 80px;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: Roboto-Medium;
+  font-size: 18px;
+  margin: 0 0 0 0;
+  font-weight: normal;
+}
+
+.logtext,
+.failureLogtext {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.failureLogtext {
+  color: #e72100;
+}
+
+.title {
+  width: 1280px;
+  height: 80px;
+  background: #394a59;
+  position: absolute;
+  top: 10;
+  left: 10;
+  text-align: center;
+  color: white;
+}
+
+table {
+  background-color: white;
+  border-spacing: 0;
+  width: 900px;
+  position: absolute;
+  top: 40px;
+}
+td {
+  border-bottom: 1px solid #eeeeee;
+  line-height: 0px;
+}

@@ -86,18 +86,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ARIAeDocDashboard:build"
+            "browserTarget": "Diagnostissimo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ARIAeDocDashboard:build:production"
+              "browserTarget": "Diagnostissimo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ARIAeDocDashboard:build"
+            "browserTarget": "Diagnostissimo:build"
           }
         },
         "test": {
@@ -133,16 +133,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ARIAeDocDashboard:serve"
+            "devServerTarget": "Diagnostissimo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ARIAeDocDashboard:serve:production"
+              "devServerTarget": "Diagnostissimo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ARIAeDocDashboard"
+  "defaultProject": "Diagnostissimo"
 }

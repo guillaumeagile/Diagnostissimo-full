@@ -41,7 +41,7 @@
     "@types/node": "8.9.4",
     "chai": "4.2.0",
     "codelyzer": "5.0.0",
-    "cypress": "3.8.0",
+    "cypress": "^3.8.3",
     "cypress-cucumber-preprocessor": "1.18.0",
     "eslint": "6.7.2",
     "jasmine-core": "3.4.0",
@@ -62,11 +62,11 @@
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
-      "<rootDir>/Specs/unit/setupJest.ts"
+      "<rootDir>/specs/unit/setupJest.ts"
     ],
     "globals": {
       "ts-jest": {
-        "tsConfig": "<rootDir>/Specs/tsconfig.spec.json"
+        "tsConfig": "<rootDir>/specs/tsconfig.spec.json"
       },
       "stringifyContentPathRegex": true
     },
@@ -87,7 +87,7 @@
     }
   },
   "cypress-cucumber-preprocessor": {
-    "step_definitions": "./Specs/e2e/specs/"
+    "step_definitions": "./specs/e2e/specs/"
   },
   "prettier": {
     "singleQuote": true,

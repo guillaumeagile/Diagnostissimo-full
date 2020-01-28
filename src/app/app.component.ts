@@ -14,9 +14,14 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
   }
 
+    sampleDataJSON : [
+      { 'uid': '5', 'product': '', 'entryDate': '', 'ariaUser': '', 'windowsLogin': '', 'machine': '', 'content': '', 'error': '',
+        'entryStatus': '', 'requestUID': ''},
+          ];
+
   ngOnInit() {
     const origin = window.location.origin + '/Diagnostissimo/logentries';
-    this.http.get<Array<LogEntry>>(origin).subscribe(data => {
+    this.http.get<Array<LogEntry>>(origin).subscribe(data => {     
       this.logEntries = data;
     }, error => console.error('Error while retrieving log data!', error))
   }

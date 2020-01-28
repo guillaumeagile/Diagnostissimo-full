@@ -18,7 +18,7 @@ function visitHomePage(jsonArray) {
   });
 }
 
-Then(/^there are (.+) log entries$/, numberOfElements => {
+Then(/^there are (\d+) log entries$/, numberOfElements => {
   cy.get('#jobs')
     .find('tr')
     .should('have.length', numberOfElements);

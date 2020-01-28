@@ -1,6 +1,6 @@
 {
     "baseUrl": "http://localhost:4201",
-    "pluginsFile": "Specs/e2e/plugins/index.js",
+    "pluginsFile": "specs/e2e/plugins/index.js",
     "ignoreTestFiles": [
         "*.js",
         "*.cs"

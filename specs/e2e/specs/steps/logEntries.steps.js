@@ -1,17 +1,33 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
-Given(/^the home page is loaded with following values$/, table => {
-  let res = visitHomePage(table.hashes());
+Given(/^the home page is loaded with following values as (.?)$/, (serviceUrl, table) => {
+  let res = visitHomePage(table.hashes(), serviceUrl); //https://gist.github.com/wswebcreation/ae98ecf66aedd7b1037cfe70b188c26c
   cy.LastPageLoadedStatus = res;
 });
 
-function visitHomePage(jsonArray) {
+var  funcThatLoadPageWithInitialData = 
+
+
+Given(/^(\d+) questionnaire existe déjà$/, (numberOfQuestionnaire)=> {
+ // ?? = numberOfQuestionnaire;
+} );
+
+When( /^la page s'ouvre$/, ()=>{
+  cy.visit("/");
+});
+
+Then(/^un message contient '(.+)'$/ , (text)=>{
+  cy.get('h3').should('contain.text', text);
+} );
+
+
+function visitHomePage(jsonArray, serviceUrl) {
   cy.window().then(win => {
     cy.server();
     cy.route({
       method: 'GET',
-      url: '/Diagnostissimo/logentries',
+      url: '/Diagnostissimo/' + serviceUrl,
       response: jsonArray
     });
     cy.visit('/');

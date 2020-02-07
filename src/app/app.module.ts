@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { logEntryComponent } from './logEntrycomponent';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    logEntryComponent
   ],
   imports: [
     BrowserModule, HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [logEntryComponent]
 })
 export class AppModule { }

@@ -2,7 +2,7 @@ export interface LogEntry {
     uid: string;
     product: string;
     entryDate: Date;
-    ariaUser: string;
+    user: string;
     windowsLogin: string;
     machine: string;
     content: string;

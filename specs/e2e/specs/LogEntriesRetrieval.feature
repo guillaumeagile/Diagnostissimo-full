@@ -3,7 +3,7 @@ Feature: Log entry display
     I want to check log entries data retrieval
 
     Scenario: Log data are displayed
-        Given the home page is loaded with following values as logentries
+        Given the home page is loaded with following values as 'logentries'
             | uid | product     | entryDate           | user | windowsLogin | machine  | content  | error  | entryStatus | requestUID |
             | 123 | My product  | 2019-12-19T08:00:15 | John | jdoe         | machine1 | content1 | error1 | SUCCESS     | 123        |
             | 456 | my product2 | 2019-12-19T08:00:15 | Jack | jbauer       | machine2 | content2 | error2 | ERROR       | 456        |
@@ -11,13 +11,13 @@ Feature: Log entry display
         Then there are 3 log entries
 
     Scenario: Check success entry
-        Given the home page is loaded with following values as logentries
+        Given the home page is loaded with following values as 'logentries'
             | uid | product    | entryDate           | user | windowsLogin | machine  | content  | error  | entryStatus | requestUID |
             | 123 | My product | 2019-12-19T08:00:15 | John | jdoe         | machine1 | content1 | error1 | SUCCESS     | 123        |
         Then the 1st list entry is 'Success - 2019-12-19T08:00:15 : Document successfully inserted by John (jdoe) on machine1'
 
     Scenario: Check failure entry
-        Given the home page is loaded with following values as logentries
+        Given the home page is loaded with following values as 'logentries'
             | uid | product    | entryDate           | user | windowsLogin | machine  | content  | error  | entryStatus | requestUID |
             | 123 | My product | 2019-12-19T08:00:15 | John | jdoe         | machine1 | content1 | error1 | ERROR       | 123        |
         Then the 1st list entry is 'Failure - 2019-12-19T08:00:15 : Document insertion failure by John (jdoe) on machine1'

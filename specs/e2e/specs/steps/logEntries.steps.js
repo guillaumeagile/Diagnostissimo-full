@@ -1,12 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
-Given(/^the home page is loaded with following values as (.?)$/, (serviceUrl, table) => {
+Given(/^the home page is loaded with following values as '(.+)'$/, (serviceUrl, table) => {
   let res = visitHomePage(table.hashes(), serviceUrl); //https://gist.github.com/wswebcreation/ae98ecf66aedd7b1037cfe70b188c26c
   cy.LastPageLoadedStatus = res;
 });
 
-var  funcThatLoadPageWithInitialData = 
 
 
 Given(/^(\d+) questionnaire existe déjà$/, (numberOfQuestionnaire)=> {
